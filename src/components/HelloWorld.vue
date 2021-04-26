@@ -11,7 +11,7 @@
           For help and collaboration with other Vuetify developers,
           <br />please join our online
           <a href="https://community.vuetifyjs.com" target="_blank"
-            >Discord Communities</a
+            >Discord Community</a
           >
         </p>
       </v-col>
