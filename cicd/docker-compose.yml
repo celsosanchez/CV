@@ -1,13 +1,13 @@
 version: '3'
 services:
-  nginx:
-    image: celsosanchez/4-dvop:nginx
+  nginx-host:
+    image: celsosanchez/cv:nginx
     ports:
       - "8080:8080"
-  haproxy:
-    image: celsosanchez/4-dvop:haproxy
+  nginx-reverse:
+    image: celsosanchez/cv:reverse
     ports:
       - "80:80"
     depends_on:
-      - nginx
+      - nginx-host
 
