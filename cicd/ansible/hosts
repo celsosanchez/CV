@@ -1,17 +1,7 @@
-[app]
-192.168.31.207
+[ec2]
+3.142.222.192 
 
-[registry]
-192.168.31.21
-
-[git]
-192.168.31.148
-
-[servers]
-192.168.31.21
-192.168.31.148
-
-[all]
-192.168.31.21
-192.168.31.148
-192.168.31.207
+[ec2:vars]
+ansible_ssh_user=ec2-user
+ansible_ssh_private_key_file=/home/AzTest.pem
+ 
