@@ -1,7 +1,7 @@
  #4dvop-app.yaml
 ---
 - hosts: ec2
-  become: true
+  gather_facts: False
   tasks:
     # - name: Deploy nginx
     #   docker_container:
