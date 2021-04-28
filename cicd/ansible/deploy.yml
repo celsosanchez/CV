@@ -2,15 +2,17 @@
 - hosts: ec2
   become: true
   tasks:
-    - name: Deploy nginx
-      docker_container:
-        name: cv
-        hostname: cv
-        image: celsosanchez/cv-nginx
-        state: started
-        ports:
-          - "3000:80"
- 
+    # - name: Deploy nginx
+    #   docker_container:
+    #     name: cv
+    #     hostname: cv
+    #     image: celsosanchez/cv-nginx
+    #     state: started
+    #     ports:
+    #       - "3000:80"
+    - name: test shell
+      shell:
+        " echo done!"  
     # - name: Deploy 4dvop-haproxy
     #   docker_container:
     #     name: haproxy
