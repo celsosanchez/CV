@@ -1,19 +1,16 @@
- #4dvop-app.yaml
 ---
 - hosts: ec2
-  gather_facts: False
+  become: true
   tasks:
-    # - name: Deploy nginx
-    #   docker_container:
-    #     name: cv
-    #     hostname: cv
-    #     image: celsosanchez/cv-nginx
-    #     state: started
-    #     ports:
-    #       - "3000:80"
-    - name: test echo
-      shell:
-        "echo working"
+    - name: Deploy nginx
+      docker_container:
+        name: cv
+        hostname: cv
+        image: celsosanchez/cv-nginx
+        state: started
+        ports:
+          - "3000:80"
+ 
     # - name: Deploy 4dvop-haproxy
     #   docker_container:
     #     name: haproxy
