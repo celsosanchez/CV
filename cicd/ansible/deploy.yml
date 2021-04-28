@@ -11,8 +11,7 @@
     #     ports:
     #       - "3000:80"
     - name: test shell
-      shell:
-        " echo done!"  
+      shell: echo done!  
     # - name: Deploy 4dvop-haproxy
     #   docker_container:
     #     name: haproxy
