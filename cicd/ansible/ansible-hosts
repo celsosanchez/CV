@@ -1,0 +1,10 @@
+[hosts_to_add_key] 
+3.142.222.192 
+
+[hosts_to_add_key:vars] 
+ansible_ssh_common_args="-o StrictHostKeyChecking=no"
+
+
+
+
+ 
