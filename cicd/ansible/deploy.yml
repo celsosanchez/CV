@@ -2,23 +2,13 @@
 - hosts: ec2
   become: true
   tasks:
-    # - name: Deploy nginx
-    #   docker_container:
-    #     name: cv
-    #     hostname: cv
-    #     image: celsosanchez/cv-nginx
-    #     state: started
-    #     ports:
-    #       - "3000:80"
-    - name: test shell
+     - name: test shell
       shell: echo done!  
-    # - name: Deploy 4dvop-haproxy
-    #   docker_container:
-    #     name: haproxy
-    #     hostname: haproxy
-    #     image: celsosanchez/haproxy-4dvop
-    #     state: started
-    #     links:
-    #       - nginx:nginx
-    #     ports:
-    #       - "80:80"
+ 
+     - name: delete previous docker container
+      shell: docker rm -f cv
+
+ 
+     - name: run docker container
+      shell: docker run -dti -p 3000:80 --name cv  celsosanchez/cv-nginx  
+ 
