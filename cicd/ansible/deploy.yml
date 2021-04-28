@@ -2,13 +2,11 @@
 - hosts: ec2
   become: true
   tasks:
-     - name: test shell
-      shell: echo done!  
- 
+  
      - name: delete previous docker container
-      shell: docker rm -f cv
+       shell: docker rm -f cv
 
  
      - name: run docker container
-      shell: docker run -dti -p 3000:80 --name cv  celsosanchez/cv-nginx  
+       shell: docker run -dti -p 3000:80 --name cv  celsosanchez/cv-nginx  
  
