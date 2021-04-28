@@ -1,23 +1,23 @@
  #4dvop-app.yaml
 ---
-- hosts: prod
+- hosts: ec2
   become: true
   tasks:
-    - name: Deploy 4dvop-nginx
+    - name: Deploy nginx
       docker_container:
-        name: nginx
-        hostname: nginx
-        image: celsosanchez/nginx-4dvop
+        name: cv
+        hostname: cv
+        image: celsosanchez/cv-nginx
         state: started
         ports:
-          - "8080:8080"
-    - name: Deploy 4dvop-haproxy
-      docker_container:
-        name: haproxy
-        hostname: haproxy
-        image: celsosanchez/haproxy-4dvop
-        state: started
-        links:
-          - nginx:nginx
-        ports:
-          - "80:80"
+          - "3000:80"
+    # - name: Deploy 4dvop-haproxy
+    #   docker_container:
+    #     name: haproxy
+    #     hostname: haproxy
+    #     image: celsosanchez/haproxy-4dvop
+    #     state: started
+    #     links:
+    #       - nginx:nginx
+    #     ports:
+    #       - "80:80"
