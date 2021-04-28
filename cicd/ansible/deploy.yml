@@ -8,5 +8,5 @@
 
  
      - name: run docker container
-       shell: docker run -dti -p 3000:80 --name cv  celsosanchez/cv-nginx  
+       shell: docker run -dti -p 3000:80 --name cv  celsosanchez/cv-nginx:latest 
  
