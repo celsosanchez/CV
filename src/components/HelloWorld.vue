@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <v-row class="text-center">
+    <v-row justify="center" class="text-center">
 
-      <v-col class="mb-4">
+      <v-col  justify="center" class="d-flex justify-center mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
           Hi there my love!
         </h1>
