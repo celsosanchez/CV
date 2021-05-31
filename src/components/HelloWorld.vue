@@ -18,7 +18,7 @@
 
       <v-col class="mb-5" cols="12">
         <h2 class="headline font-weight-bold mb-3">
-          What's next??
+          What's going on??
         </h2>
 
         <v-row justify="center">
